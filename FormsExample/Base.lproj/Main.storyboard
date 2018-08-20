@@ -1,24 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bFo-gf-d5p">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Form Examples-->
+        <scene sceneID="WU0-PS-rMG">
+            <objects>
+                <viewController id="9yx-Pw-yt4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kZ1-WE-IYz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1ke-XV-bZB">
+                                <rect key="frame" x="16" y="317.5" width="343" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0n-zm-6EA">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Simple Form"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="taC-gb-dMc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FV2-tl-JjZ" firstAttribute="trailing" secondItem="1ke-XV-bZB" secondAttribute="trailing" constant="16" id="0Ut-sl-UeB"/>
+                            <constraint firstItem="1ke-XV-bZB" firstAttribute="leading" secondItem="FV2-tl-JjZ" secondAttribute="leading" constant="16" id="aIt-ob-alH"/>
+                            <constraint firstItem="1ke-XV-bZB" firstAttribute="centerY" secondItem="kZ1-WE-IYz" secondAttribute="centerY" id="wAK-gk-9GM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FV2-tl-JjZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Form Examples" id="RUJ-pq-o53">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="MYs-ID-0XZ"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJl-Ic-eVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="27.436281859070466"/>
+        </scene>
+        <!--Simple Form View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SimpleFormViewController" customModule="FormsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nQG-ru-lRP" userLabel="Form">
+                                <rect key="frame" x="16" y="258" width="343" height="151"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lmH-3G-4yf" userLabel="Labels">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="151"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf4-bV-tmy">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4V-Rh-vzj">
+                                                <rect key="frame" x="0.0" y="53" width="86" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUv-vd-FpS">
+                                                <rect key="frame" x="0.0" y="106" width="86" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wUv-vd-FpS" firstAttribute="width" secondItem="Y4V-Rh-vzj" secondAttribute="width" id="1XV-ZC-TrJ"/>
+                                            <constraint firstItem="Y4V-Rh-vzj" firstAttribute="width" secondItem="Lf4-bV-tmy" secondAttribute="width" id="Mqg-tJ-Fut"/>
+                                            <constraint firstItem="Y4V-Rh-vzj" firstAttribute="height" secondItem="Lf4-bV-tmy" secondAttribute="height" id="cn6-hR-uED"/>
+                                            <constraint firstItem="wUv-vd-FpS" firstAttribute="height" secondItem="Y4V-Rh-vzj" secondAttribute="height" id="lD6-y3-4P6"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TCo-jr-GLp" userLabel="Form Fields">
+                                        <rect key="frame" x="94" y="0.0" width="249" height="151"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lWb-Wv-f8d" customClass="TextField" customModule="FormsExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="249" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="SQU-5D-6BN"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="firstName"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOt-Er-RZD" customClass="TextField" customModule="FormsExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="53" width="249" height="45"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="lastName"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iN8-aM-KzT" customClass="TextField" customModule="FormsExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="106" width="249" height="45"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="age"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="iN8-aM-KzT" firstAttribute="height" secondItem="aOt-Er-RZD" secondAttribute="height" id="gkH-V5-cnf"/>
+                                            <constraint firstItem="aOt-Er-RZD" firstAttribute="height" secondItem="lWb-Wv-f8d" secondAttribute="height" id="pF7-nS-lex"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lf4-bV-tmy" firstAttribute="height" secondItem="lWb-Wv-f8d" secondAttribute="height" id="iNB-g8-hAn"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT4-0t-8xQ">
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FWN-dC-Gzx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit" destination="BYZ-38-t0r" eventType="touchUpInside" id="QAm-c4-osX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hT4-0t-8xQ" secondAttribute="trailing" constant="16" id="0yH-W7-M7u"/>
+                            <constraint firstItem="nQG-ru-lRP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MGB-yI-rxm"/>
+                            <constraint firstItem="hT4-0t-8xQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MMh-FI-Yaf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nQG-ru-lRP" secondAttribute="trailing" constant="16" id="VUX-iO-XzQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hT4-0t-8xQ" secondAttribute="bottom" constant="20" id="hdR-GM-OFT"/>
+                            <constraint firstItem="nQG-ru-lRP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uGI-q9-xVM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="form" destination="LOq-DV-Kog" id="ohg-cz-rlk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="LOq-DV-Kog" customClass="Form" customModule="FormsExample" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="controls" destination="lWb-Wv-f8d" collectionClass="NSMutableArray" id="E6P-65-MVa"/>
+                        <outletCollection property="controls" destination="aOt-Er-RZD" collectionClass="NSMutableArray" id="upf-uT-Eju"/>
+                        <outletCollection property="controls" destination="iN8-aM-KzT" collectionClass="NSMutableArray" id="joK-8Y-L5h"/>
+                    </connections>
+                </customObject>
             </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lwR-K4-h5b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bFo-gf-d5p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GIp-he-geG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9yx-Pw-yt4" kind="relationship" relationship="rootViewController" id="7Os-TB-Uop"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snP-Zy-HOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-991.20000000000005" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>
