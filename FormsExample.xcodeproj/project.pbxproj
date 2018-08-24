@@ -15,6 +15,12 @@
 		895190E0212B0CF200FE920B /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895190DF212B0CF200FE920B /* Form.swift */; };
 		895190E2212B0CF900FE920B /* FormControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895190E1212B0CF900FE920B /* FormControl.swift */; };
 		895190E5212B0D7A00FE920B /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895190E4212B0D7A00FE920B /* TextField.swift */; };
+		89F2417B21305B2C001A2268 /* UserRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F2417A21305B2C001A2268 /* UserRegistrationViewController.swift */; };
+		89F2417D21305E2B001A2268 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F2417C21305E2B001A2268 /* Validator.swift */; };
+		89F2418021305E7C001A2268 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F2417F21305E7C001A2268 /* EmailValidator.swift */; };
+		89F2418221305E8A001A2268 /* UsernameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F2418121305E8A001A2268 /* UsernameValidator.swift */; };
+		89F241842130620B001A2268 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F241832130620B001A2268 /* PasswordValidator.swift */; };
+		89F2418621308077001A2268 /* UserRegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F2418521308077001A2268 /* UserRegistrationForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		895190DF212B0CF200FE920B /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		895190E1212B0CF900FE920B /* FormControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormControl.swift; sourceTree = "<group>"; };
 		895190E4212B0D7A00FE920B /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		89F2417A21305B2C001A2268 /* UserRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewController.swift; sourceTree = "<group>"; };
+		89F2417C21305E2B001A2268 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		89F2417F21305E7C001A2268 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		89F2418121305E8A001A2268 /* UsernameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValidator.swift; sourceTree = "<group>"; };
+		89F241832130620B001A2268 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		89F2418521308077001A2268 /* UserRegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +86,11 @@
 		895190E3212B0CFC00FE920B /* Forms */ = {
 			isa = PBXGroup;
 			children = (
+				89F2417E21305E71001A2268 /* Validators */,
 				895190E1212B0CF900FE920B /* FormControl.swift */,
 				895190DF212B0CF200FE920B /* Form.swift */,
 				895190E4212B0D7A00FE920B /* TextField.swift */,
+				89F2418521308077001A2268 /* UserRegistrationForm.swift */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -85,8 +99,20 @@
 			isa = PBXGroup;
 			children = (
 				895190CF212B090A00FE920B /* SimpleFormViewController.swift */,
+				89F2417A21305B2C001A2268 /* UserRegistrationViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		89F2417E21305E71001A2268 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				89F2417C21305E2B001A2268 /* Validator.swift */,
+				89F2417F21305E7C001A2268 /* EmailValidator.swift */,
+				89F2418121305E8A001A2268 /* UsernameValidator.swift */,
+				89F241832130620B001A2268 /* PasswordValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +190,12 @@
 				895190E2212B0CF900FE920B /* FormControl.swift in Sources */,
 				895190CE212B090A00FE920B /* AppDelegate.swift in Sources */,
 				895190E5212B0D7A00FE920B /* TextField.swift in Sources */,
+				89F2417D21305E2B001A2268 /* Validator.swift in Sources */,
+				89F2418021305E7C001A2268 /* EmailValidator.swift in Sources */,
+				89F2418621308077001A2268 /* UserRegistrationForm.swift in Sources */,
+				89F2417B21305B2C001A2268 /* UserRegistrationViewController.swift in Sources */,
+				89F241842130620B001A2268 /* PasswordValidator.swift in Sources */,
+				89F2418221305E8A001A2268 /* UsernameValidator.swift in Sources */,
 				895190E0212B0CF200FE920B /* Form.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

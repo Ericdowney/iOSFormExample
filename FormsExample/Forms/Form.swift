@@ -14,6 +14,14 @@ class Form: NSObject {
     
     @IBOutlet var controls: [FormControl]?
     
+    // MARK: - Properties
+    
+    var isValid: Bool {
+        return controls?.reduce(true) { result, next in
+            result && next.isValid
+        } ?? true
+    }
+    
     // MARK: - Subscripts
     
     subscript(_ key: String) -> String? {

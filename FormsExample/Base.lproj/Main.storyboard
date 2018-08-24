@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1ke-XV-bZB">
-                                <rect key="frame" x="16" y="317.5" width="343" height="32"/>
+                                <rect key="frame" x="16" y="301.5" width="343" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0n-zm-6EA">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="32"/>
@@ -27,6 +27,14 @@
                                         <state key="normal" title="Simple Form"/>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="taC-gb-dMc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jt7-dN-wel">
+                                        <rect key="frame" x="0.0" y="32" width="343" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="User Registration Form"/>
+                                        <connections>
+                                            <segue destination="g6E-bq-KfS" kind="show" id="SBG-FT-X0I"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -48,7 +56,181 @@
             </objects>
             <point key="canvasLocation" x="-52" y="27.436281859070466"/>
         </scene>
-        <!--Simple Form View Controller-->
+        <!--User Registration-->
+        <scene sceneID="0O9-cg-CwU">
+            <objects>
+                <viewController id="g6E-bq-KfS" customClass="UserRegistrationViewController" customModule="FormsExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wXZ-2T-qt7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x6-XU-vfz">
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6EH-CQ-gdU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Dy6-6W-2GC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit" destination="g6E-bq-KfS" eventType="touchUpInside" id="gRj-ZZ-EJG"/>
+                                    <action selector="submit" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOq-u1-ZHv"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wVL-S5-zEf" userLabel="Form">
+                                <rect key="frame" x="16" y="205" width="343" height="257"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rvd-fV-qFh" userLabel="Labels">
+                                        <rect key="frame" x="0.0" y="0.0" width="145.5" height="257"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mD-Dw-rfm">
+                                                <rect key="frame" x="0.0" y="0.0" width="145.5" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCj-fB-RMI">
+                                                <rect key="frame" x="0.0" y="53" width="145.5" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvR-mo-nai">
+                                                <rect key="frame" x="0.0" y="106" width="145.5" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJn-AH-tCE">
+                                                <rect key="frame" x="0.0" y="159" width="145.5" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep2-bb-AfH">
+                                                <rect key="frame" x="0.0" y="212" width="145.5" height="45"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="tCj-fB-RMI" firstAttribute="height" secondItem="2mD-Dw-rfm" secondAttribute="height" id="ElX-ib-XTb"/>
+                                            <constraint firstItem="Ep2-bb-AfH" firstAttribute="height" secondItem="dJn-AH-tCE" secondAttribute="height" id="IIV-sY-ADP"/>
+                                            <constraint firstItem="VvR-mo-nai" firstAttribute="height" secondItem="tCj-fB-RMI" secondAttribute="height" id="MOg-Sz-7FA"/>
+                                            <constraint firstItem="dJn-AH-tCE" firstAttribute="height" secondItem="VvR-mo-nai" secondAttribute="height" id="Pg9-xQ-4a5"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BHs-hP-Q4G" userLabel="Form Fields">
+                                        <rect key="frame" x="153.5" y="0.0" width="189.5" height="257"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yGn-1u-suH" customClass="TextField" customModule="FormsExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="189.5" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="G2D-AU-Ogb"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="name"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BZl-1L-RX6" customClass="TextField" customModule="FormsExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="53" width="189.5" height="45"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="username"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="validators" destination="ScE-OC-EWD" collectionClass="NSMutableArray" id="llW-2e-HGX"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGU-4R-7j3" customClass="TextField" customModule="FormsExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="106" width="189.5" height="45"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="email"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="validators" destination="59z-EJ-bkz" collectionClass="NSMutableArray" id="P9Z-Dn-UTt"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcB-RX-Zvh" customClass="TextField" customModule="FormsExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="159" width="189.5" height="45"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="password"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="validators" destination="gEl-fL-8UM" collectionClass="NSMutableArray" id="BfJ-uV-jAv"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G09-g6-0bd" customClass="TextField" customModule="FormsExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="212" width="189.5" height="45"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="key" value="confirmPassword"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outletCollection property="validators" destination="gEl-fL-8UM" collectionClass="NSMutableArray" id="aoW-rB-Y7Y"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BZl-1L-RX6" firstAttribute="height" secondItem="yGn-1u-suH" secondAttribute="height" id="1aW-6v-r5O"/>
+                                            <constraint firstItem="G09-g6-0bd" firstAttribute="height" secondItem="AcB-RX-Zvh" secondAttribute="height" id="BlJ-vE-67j"/>
+                                            <constraint firstItem="NGU-4R-7j3" firstAttribute="height" secondItem="BZl-1L-RX6" secondAttribute="height" id="LEL-sF-h1N"/>
+                                            <constraint firstItem="AcB-RX-Zvh" firstAttribute="height" secondItem="NGU-4R-7j3" secondAttribute="height" id="spa-Eu-K7t"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2mD-Dw-rfm" firstAttribute="height" secondItem="yGn-1u-suH" secondAttribute="height" id="W6f-Gj-FfI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wVL-S5-zEf" firstAttribute="leading" secondItem="SbY-aq-JHF" secondAttribute="leading" constant="16" id="Hzy-4x-gEV"/>
+                            <constraint firstItem="6x6-XU-vfz" firstAttribute="leading" secondItem="SbY-aq-JHF" secondAttribute="leading" constant="16" id="bDb-Ba-7dr"/>
+                            <constraint firstItem="wVL-S5-zEf" firstAttribute="centerY" secondItem="wXZ-2T-qt7" secondAttribute="centerY" id="dl7-RQ-agi"/>
+                            <constraint firstItem="SbY-aq-JHF" firstAttribute="trailing" secondItem="6x6-XU-vfz" secondAttribute="trailing" constant="16" id="j33-rU-ohr"/>
+                            <constraint firstItem="SbY-aq-JHF" firstAttribute="bottom" secondItem="6x6-XU-vfz" secondAttribute="bottom" constant="20" id="lAx-Jx-y1f"/>
+                            <constraint firstItem="SbY-aq-JHF" firstAttribute="trailing" secondItem="wVL-S5-zEf" secondAttribute="trailing" constant="16" id="ySc-Lz-ESL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SbY-aq-JHF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="User Registration" id="Q1y-xH-yAu"/>
+                    <connections>
+                        <outlet property="form" destination="bF4-yz-og9" id="myQ-SC-sce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AIy-BJ-U7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="bF4-yz-og9" customClass="UserRegistrationForm" customModule="FormsExample" customModuleProvider="target">
+                    <connections>
+                        <outletCollection property="controls" destination="yGn-1u-suH" collectionClass="NSMutableArray" id="Ldo-BK-LTT"/>
+                        <outletCollection property="controls" destination="BZl-1L-RX6" collectionClass="NSMutableArray" id="qNF-MM-FhV"/>
+                        <outletCollection property="controls" destination="NGU-4R-7j3" collectionClass="NSMutableArray" id="Ze9-qP-Xi0"/>
+                        <outletCollection property="controls" destination="AcB-RX-Zvh" collectionClass="NSMutableArray" id="Ct6-8s-YU8"/>
+                        <outletCollection property="controls" destination="G09-g6-0bd" collectionClass="NSMutableArray" id="6FP-rM-UQD"/>
+                    </connections>
+                </customObject>
+                <customObject id="ScE-OC-EWD" customClass="UsernameValidator" customModule="FormsExample" customModuleProvider="target"/>
+                <customObject id="59z-EJ-bkz" customClass="EmailValidator" customModule="FormsExample" customModuleProvider="target"/>
+                <customObject id="gEl-fL-8UM" customClass="PasswordValidator" customModule="FormsExample" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="328"/>
+        </scene>
+        <!--Simple-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SimpleFormViewController" customModule="FormsExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -155,6 +337,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Simple" id="2fa-AN-jZX"/>
                     <connections>
                         <outlet property="form" destination="LOq-DV-Kog" id="ohg-cz-rlk"/>
                     </connections>
@@ -168,7 +351,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
+            <point key="canvasLocation" x="1028" y="-474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lwR-K4-h5b">

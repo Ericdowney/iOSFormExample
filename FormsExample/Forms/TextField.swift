@@ -13,9 +13,19 @@ import UIKit
     // MARK: - Inspectables
     
     @IBInspectable var key: String?
+    
+    // MARK: - Outlets
+    
+    @IBOutlet var validators: [Validator]?
 }
 
 extension TextField: FormControl {
+    var isValid: Bool {
+        return validators?.reduce(true) { result, next in
+            result && next.validate(text)
+        } ?? true
+    }
+    
     func clear() {
         text = nil
     }
